@@ -1,0 +1,10 @@
+apiVersion: web.appsfactory.app/v1alpha1
+kind: StaticSite
+metadata:
+  name: {{ include "web-site.fullname" . }}
+  labels:
+    {{- include "web-site.labels" . | nindent 4 }}
+spec:
+  gitRepositoryUrl: {{ .Values.staticSite.gitRepositoryUrl | quote }}
+  replicas: {{ .Values.staticSite.replicas | default 1 }}
+  port: {{ .Values.staticSite.port | default 80 }}

@@ -1,0 +1,10 @@
+# Global configuration for the appsfactory StaticSite operator
+staticSite:
+  # The repository you created
+  gitRepositoryUrl: "https://github.com/af-atp/static-site"
+  
+  # Desired scale configuration
+  replicas: 2
+  
+  # The internal port Nginx should expose
+  targetPort: 80
