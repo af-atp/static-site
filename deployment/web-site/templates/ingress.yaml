@@ -31,5 +31,5 @@ spec:
               service:
                 name: {{ include "web-site.fullname" . }}
                 port:
-                  number: {{ .Values.staticSite.targetPort | default 80 }}
+                  number: {{ .Values.staticSite.port | default .Values.staticSite.targetPort | default 80 }}
 {{- end -}}

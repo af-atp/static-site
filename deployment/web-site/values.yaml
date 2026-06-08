@@ -5,8 +5,11 @@ staticSite:
   
   # Desired scale configuration
   replicas: 2
+
+  # The service port and container port used by the generated site
+  port: 80
   
-  # The internal port Nginx should expose
+  # Backward-compatible alias used by older chart versions
   targetPort: 80
 
 ingress:
